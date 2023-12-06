@@ -6,6 +6,30 @@ Pembagian subnet dapat dilihat sebagai berikut.
 
 ![image](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/115076652/48b4a731-8fdd-490e-82c3-ecd926a6ab72)
 
+## VLSM Tree
+Untuk memudahkan dalam membagi perhitungan VLSM, kami menggunakan Tree terlebih dahulu.
+
+![VLSM](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/34641833/cc8e9360-6e70-4171-b6ed-c2420fc5c440)
+
+## Pembagian Perhitungan VLSM
+Setelah itu, kami bisa melakukan pembagian perhitungan untuk VLSM.
+
+![VLSM - PEMBAGIAN NETWORK](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/34641833/d33aaaeb-c93c-4c5c-a815-7e014ba35455)
+
+## Konfigurasi CPT
+Setelah menentukan semua subnet, kita bisa buka router node Aura dan isi IP berdasarkan arah eth. Contohnya, Aura ke Frieren melalui Fa1/0, maka Frieren kembali ke Aura melalui Fa0/0.
+
+![VLSM - CONFIG AURA](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/34641833/bb4c28de-c7b3-4199-94d4-d71674914034)
+
+![VLSM - CONFIG FRIEREN](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/34641833/b7d5ca26-9135-4b19-8620-05798ca01cd0)
+
+Lakukan hal yang sama kepada node-node lain.
+
+## Routing CPT
+Untuk menghubungkan semua subnet, kita bisa melakukan routing dengan membuka node router, lalu pilih Routing -> Static. Setelah itu Network diisi dengan IP yang dituju, Mask diisi dengan Netmask IP tersebut. Lalu, Next Hop diisi dengan node router terdekat yang menjadi jembatan. Untuk routing mundur (menuju Aura) Network dan Mask diisi dengan 0.0.0.0.
+
+![VLSM - ROUTING AURA](https://github.com/lodaogos/Jarkom-Modul-4-D28-2023/assets/34641833/103ef249-7797-44fb-a7e3-3e5ac9d11d42)
+
 ## Pembagian Perhitungan CIDR
 
 Dari subnet tersebut kita bisa bagi gabungkan subnet satu per satu hingga menjadi sebuah subnet besar seperti berikut ini.
